@@ -1,13 +1,68 @@
 :root {
   --font-family: "Source Serif Pro", serif;
   --text-align: center;
+  --branding-color: #b1afff;
 }
 body {
   text-align: var(--text-align);
   font-family: var(--font-family);
 }
 
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 41px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
 img {
   max-width: 100%;
   height: auto;
+}
+p {
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn-branding {
+  background-color: var(--branding-color);
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+}
+
+.btn-branding:hover {
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.social-links a {
+  margin: 0 20px;
+  color: var(--branding-color);
+  background: var(--secondary-color);
+  padding: 10px 14px;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: all 100ms ease-in-out;
+}
+
+.social-links a:hover {
+  color: white;
+  background: var(--branding-color);
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: 44px;
+  }
 }
