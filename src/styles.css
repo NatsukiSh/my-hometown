@@ -1,0 +1,13 @@
+:root {
+  --font-family: "Source Serif Pro", serif;
+  --text-align: center;
+}
+body {
+  text-align: var(--text-align);
+  font-family: var(--font-family);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
