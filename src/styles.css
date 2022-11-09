@@ -22,6 +22,12 @@ h4 {
 
 p {
   line-height: 2;
+  text-align: left;
+}
+
+p::first-letter {
+  font-size: 40px;
+  color: #fe9503;
 }
 
 a {
