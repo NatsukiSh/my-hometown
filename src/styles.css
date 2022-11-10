@@ -1,13 +1,23 @@
 :root {
   --font-family: "Source Serif Pro", serif;
   --text-align: center;
-  --branding-color: #b1afff;
+  --branding-color: #cdf2ca;
+  --icon-color: #b1afff;
 }
 body {
   text-align: var(--text-align);
   font-family: var(--font-family);
+  background-color: #d8eacc;
 }
 
+.container {
+  box-shadow: 0 20px 30px rgb(65, 50, 100);
+  background-color: white;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  padding: 40px;
+  border-radius: 16px;
+}
 h1 {
   font-size: 50px;
 }
@@ -16,7 +26,7 @@ h2 {
   font-size: 41px;
 }
 
-h4 {
+h3 {
   font-size: 20px;
 }
 
@@ -37,10 +47,9 @@ a {
 .btn-branding {
   background-color: var(--branding-color);
   border-radius: 4px;
-  color: white;
   font-size: 18px;
   line-height: 27px;
-  padding: 15px 30px;
+  padding: 15px 20px;
 }
 
 .btn-branding:hover {
@@ -48,9 +57,13 @@ a {
   cursor: pointer;
 }
 
+button.btn {
+  background: var(--branding-color);
+}
+
 .social-links a {
   margin: 0 20px;
-  color: var(--branding-color);
+  color: var(--icon-color);
   background: var(--secondary-color);
   padding: 10px 14px;
   font-size: 18px;
@@ -60,7 +73,7 @@ a {
 
 .social-links a:hover {
   color: white;
-  background: var(--branding-color);
+  background: var(--icon-color);
 }
 
 @media (max-width: 900px) {
