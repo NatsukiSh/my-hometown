@@ -25,7 +25,106 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="/src/styles.css" />
+    <style>
+      :root {
+        --font-family: "Source Serif Pro", serif;
+        --primary-color: #5ac1bd;
+        --secondary-color: #6c738e;
+        --branding-color: #cdf2ca;
+        --icon-color: #b1afff;
+        --secondary-icon-clor: f9f7fe;
+        --text-align: center;
+      }
+      body {
+        text-align: var(--text-align);
+        font-family: var(--font-family);
+        background-color: #d8eacc;
+      }
+
+      .container {
+        box-shadow: 0 20px 30px rgb(0, 0, 0, 0.3);
+        background-color: white;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        padding: 40px;
+        border-radius: 16px;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      h2 {
+        font-size: 41px;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+
+      h1,
+      h2 {
+        color: var(--primary-color);
+      }
+
+      h3,
+      p,
+      #source {
+        color: var(--secondary-color);
+      }
+
+      p {
+        line-height: 2;
+        text-align: left;
+      }
+
+      p::first-letter {
+        font-size: 40px;
+        color: #fe9503;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .btn-branding {
+        background-color: var(--branding-color);
+        border-radius: 4px;
+        font-size: 18px;
+        line-height: 27px;
+        padding: 15px 20px;
+      }
+
+      .btn-branding:hover {
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+      }
+
+      button.btn {
+        background: var(--branding-color);
+      }
+
+      .social-links a {
+        margin: 0 20px;
+        color: var(--icon-color);
+        background: var(--secondary-icon-clor);
+        padding: 10px 14px;
+        font-size: 18px;
+        border-radius: 50%;
+        transition: all 100ms ease-in-out;
+      }
+
+      .social-links a:hover {
+        color: white;
+        background: var(--icon-color);
+      }
+
+      @media (max-width: 900px) {
+        h1 {
+          font-size: 44px;
+        }
+      }
+    </style>
 
     <title>My Home Prefecture Aichi</title>
   </head>
@@ -193,6 +292,28 @@
         </div>
       </footer>
     </div>
-    <script src="src/app.js"></script>
+    <script>
+      function contactUs() {
+        let message = prompt("What is your favaorite Japanese food?");
+        let firstName = prompt("What is your first name?");
+        let email = prompt("What is your email address?");
+        if (firstName.length > 0) {
+          alert(
+            "Thank you " +
+              firstName +
+              "😁" +
+              "We'll be in touch and I will send you recommendations for the local Restaurants 🍙🍜🍣"
+          );
+        } else {
+          alert(
+            "Thank you, dear " +
+              "😀" +
+              "We'll be in touch and I will send you recommendations for the local Restaurants 🍙🍜🍣"
+          );
+        }
+      }
+      let contactUsButton = document.querySelector("button");
+      contactUsButton.addEventListener("click", contactUs);
+    </script>
   </body>
 </html>
